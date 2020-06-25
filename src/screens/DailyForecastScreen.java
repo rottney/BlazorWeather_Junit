@@ -1,4 +1,7 @@
+package screens;
 import org.openqa.selenium.By;
+
+import configs.SeleniumConfig;
 
 public class DailyForecastScreen {
 

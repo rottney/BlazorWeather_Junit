@@ -1,6 +1,9 @@
+package screens;
 import java.util.ArrayList;
 
 import org.openqa.selenium.By;
+
+import configs.SeleniumConfig;
 
 public class HomeScreen {
 	

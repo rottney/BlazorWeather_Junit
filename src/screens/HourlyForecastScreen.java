@@ -1,13 +1,16 @@
+package screens;
 import org.openqa.selenium.By;
 
-public class CurrentForecastScreen {
+import configs.SeleniumConfig;
+
+public class HourlyForecastScreen {
 	
 	private SeleniumConfig config;
 	
-    private String url = "https://blazorserverweatherapp.azurewebsites.net/current";
+    private String url = "https://blazorserverweatherapp.azurewebsites.net/hourly";
     
     
-    public CurrentForecastScreen() {
+    public HourlyForecastScreen() {
         config = new SeleniumConfig();
         config.getDriver().get(url);
     }
@@ -19,5 +22,5 @@ public class CurrentForecastScreen {
     public String getTitle() {
 		return config.getDriver().findElement(By.xpath("/html/body/app/div[2]/div[2]/h1")).getText();
 	}
-
+    
 }
