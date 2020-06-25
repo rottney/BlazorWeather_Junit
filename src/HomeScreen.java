@@ -1,18 +1,17 @@
 import java.util.ArrayList;
-import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
-public class SeleniumExample {
+public class HomeScreen {
 	
 	private SeleniumConfig config;
-    private String url = "https://blazorserverweatherapp.azurewebsites.net";	// homepage
+	
+    private String url = "https://blazorserverweatherapp.azurewebsites.net";
  
     
-    public SeleniumExample() {
+    public HomeScreen() {
         config = new SeleniumConfig();
-        config.getDriver().get(url);	// does getDriver() work?
+        config.getDriver().get(url);
     }
     
     
@@ -26,11 +25,10 @@ public class SeleniumExample {
     
     
     // I might use this?
-    public void closeWindow() {
+    /*public void closeWindow() {
     	config.getDriver().close();
-	}
-    
-    // I might use this?
+	}*/
+
 	public String getTitle() {
 		return config.getDriver().getTitle();
 	}

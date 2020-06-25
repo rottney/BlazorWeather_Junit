@@ -4,68 +4,75 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
-public class Home {
+public class HomeScreenTests {
 	
 	public WebDriver driver;
 	
-	private static SeleniumExample seleniumExample;
+	private static HomeScreen homeScreen;
 	
 	
 	@Before
 	public void before() {
-	    seleniumExample = new SeleniumExample();
+	    homeScreen = new HomeScreen();
+	}
+	
+	@Test
+	public void homeScreenTitle() {
+		String title = homeScreen.getTitle();
+		
+		Assert.assertEquals("BlazorServerWeatherApp", title);
 	}
 	
 	@Test
 	public void otherProjectsLink() {
-		seleniumExample.clickOtherProjectsLink();
-		seleniumExample.switchTabs();
+		homeScreen.clickOtherProjectsLink();
+		homeScreen.switchTabs();
 		
-		String url = seleniumExample.getCurrentUrl();
+		String url = homeScreen.getCurrentUrl();
 		
 		Assert.assertEquals("https://github.com/rottney?tab=repositories", url);
 	}
 	
 	@Test
 	public void aboutLink() {
-		seleniumExample.clickAboutLink();
-		seleniumExample.switchTabs();
+		homeScreen.clickAboutLink();
+		homeScreen.switchTabs();
 		
-		String url = seleniumExample.getCurrentUrl();
+		String url = homeScreen.getCurrentUrl();
 		
 		Assert.assertEquals("https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1", url);
 	}
 	
 	@Test
 	public void currentForecastLink() {
-		seleniumExample.clickCurrentForecastLink();
+		homeScreen.clickCurrentForecastLink();
 		
-		String url = seleniumExample.getCurrentUrl();
+		String url = homeScreen.getCurrentUrl();
 		
 		Assert.assertEquals("https://blazorserverweatherapp.azurewebsites.net/current", url);
 	}
 	
 	@Test
 	public void hourlyForecastLink() {
-		seleniumExample.clickHourlyForecastLink();
+		homeScreen.clickHourlyForecastLink();
 		
-		String url = seleniumExample.getCurrentUrl();
+		String url = homeScreen.getCurrentUrl();
 		
 		Assert.assertEquals("https://blazorserverweatherapp.azurewebsites.net/hourly", url);
 	}
 	
 	@Test
 	public void dailyForecastLink() {
-		seleniumExample.clickDailyForecastLink();
+		homeScreen.clickDailyForecastLink();
 		
-		String url = seleniumExample.getCurrentUrl();
+		String url = homeScreen.getCurrentUrl();
 		
 		Assert.assertEquals("https://blazorserverweatherapp.azurewebsites.net/daily", url);
 	}
 	
 	@After
 	public void after() {
-		seleniumExample.quitDriver();
+		homeScreen.quitDriver();
 	}
 	
 }
