@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 
 import screens.CurrentForecastScreen;
 
-
 public class CurrentForecastScreenTests {
 	
 	public WebDriver driver;

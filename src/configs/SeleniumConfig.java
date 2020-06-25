@@ -23,4 +23,5 @@ public class SeleniumConfig {
 	public WebDriver getDriver() {
 		return this.driver;
 	}
+	
 }

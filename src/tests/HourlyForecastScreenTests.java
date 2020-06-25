@@ -30,4 +30,5 @@ public class HourlyForecastScreenTests {
 	public void after() {
 		hourlyForecastScreen.quitDriver();
 	}
+	
 }
