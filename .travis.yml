@@ -1,2 +1,7 @@
 language: java
 install: ant deps
+
+addons:
+  sauce_connect:
+    username: "rottney"
+    access_key: "7a70d523-3dd4-484f-a016-06b94df0e40c" # encryptMe
